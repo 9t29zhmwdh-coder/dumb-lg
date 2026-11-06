@@ -14,6 +14,14 @@ The soundbar must sit on the TV port that is labelled eARC (some LG models label
 
 Connecting the soundbar to the Apple TV over Bluetooth cannot carry Dolby Atmos. That is why the HDMI route matters.
 
+## Soundbars without an HDMI input (example: Samsung HW-S60D)
+
+Some soundbars have only one HDMI output (eARC) and no HDMI input. According to retailer spec sheets this is the case for the Samsung HW-S60D, which also lists an optical input. Such a bar cannot take the Apple TV directly, so the TV with eARC is the only route to Dolby Atmos:
+
+- On the soundbar, use the HDMI OUT (TV-eARC) socket and connect it to the TV's eARC port.
+- Optical (TOSLINK) cannot carry Atmos. It is fine as a fallback for stereo or Dolby Digital.
+- The HW-S60D is listed as decoding Dolby Atmos, Dolby Digital Plus and Dolby TrueHD, so the bar itself is not the limit.
+
 ## Setup, in this order
 
 1. **Cabling.** Use a cable rated Ultra High Speed (HDMI 2.1) between TV and soundbar. Put nothing between them: no HDMI switch, no hub, no splitter. A device in this path is the most likely reason for "only the TV speakers work".
@@ -41,11 +49,12 @@ Connecting the soundbar to the Apple TV over Bluetooth cannot carry Dolby Atmos.
 
 If you use an HDMI hub that sits between the sources and the TV, take it out of the audio path first and test with the Apple TV connected straight to the TV. Reintroduce the hub only afterwards, and only if it explicitly supports eARC passthrough.
 
-Direct connection of the Apple TV to the soundbar's HDMI input is Apple's own recommendation when the bar has such an input, with the bar's HDMI output going to the TV. This guide assumes your soundbar has no usable input for that.
+Direct connection of the Apple TV to the soundbar's HDMI input is Apple's own recommendation when the bar has such an input, with the bar's HDMI output going to the TV. With a bar that has no HDMI input, this option does not exist.
 
 ## Sources
 
 - [Apple Community: Apple TV 4K 3rd generation eARC sound issues](https://discussions.apple.com/thread/255077815)
 - [Apple Community: Atmos picture and sound with a soundbar ARC output](https://discussions.apple.com/thread/253411757)
 - [Samsung: eARC on your Samsung TV and soundbar](https://ushl.samsung.com/us/support/answer/ANS10006962)
+- [Best Buy: Samsung HW-S60D specifications](https://www.bestbuy.com/site/6577565.p)
 - [LG 2022 audio setup guide (Nakamichi helpdesk)](https://www.helpdesk.nakamichi-usa.com/lg-tv-2022-audio)
