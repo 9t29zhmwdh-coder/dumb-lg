@@ -2,6 +2,12 @@
 
 All notable changes are documented here. Format based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), versioning follows [SemVer](https://semver.org/).
 
+## [0.1.4] - 2026-11-09
+
+### Changed
+- Audio guide: eARC in HDMI 3 and the fix PCM to Automatic confirmed on the reference TV
+- Roadmap updated
+
 ## [0.1.3] - 2026-11-09
 
 ### Added
