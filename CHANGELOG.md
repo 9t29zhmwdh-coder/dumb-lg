@@ -2,6 +2,15 @@
 
 All notable changes are documented here. Format based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), versioning follows [SemVer](https://semver.org/).
 
+## [0.1.3] - 2026-11-09
+
+### Added
+- Audio guide: HDMI 3 is the eARC port of the 75QNED916QE according to LG's specification
+- Rooting guide: result of the official firmware search (no download for the Swiss model), recovery consequences
+
+### Changed
+- Roadmap: open items updated
+
 ## [0.1.2] - 2026-11-09
 
 ### Added

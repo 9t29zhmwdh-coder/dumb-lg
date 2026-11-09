@@ -22,6 +22,10 @@ Some soundbars have only one HDMI output (eARC) and no HDMI input. According to 
 - Optical (TOSLINK) cannot carry Atmos. It is fine as a fallback for stereo or Dolby Digital.
 - The HW-S60D is listed as decoding Dolby Atmos, Dolby Digital Plus and Dolby TrueHD, so the bar itself is not the limit.
 
+## Which port is eARC on the 75QNED916QE
+
+According to [LG's UK specification page](https://www.lg.com/uk/tvs-soundbars/qned/75qned916qe/), the TV has four HDMI inputs and the eARC port is HDMI 3. This is from the specification of the UK variant and is not yet confirmed on the reference TV. Check the label on the back of the TV. Put the soundbar in this port and the Apple TV in another one.
+
 ## What a working link looks like
 
 On the reference TV the Home screen lists the soundbar as the audio output with the note "HDMI(ARC) device". That means the TV found the bar and uses it, but it negotiated plain ARC. For Atmos from an Apple TV 4K you want eARC. If your TV shows ARC here, check that the cable sits in the port labelled eARC and that SIMPLINK and the bar's CEC option are on.
