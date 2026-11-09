@@ -4,6 +4,15 @@ Rooting gives a shell on the TV and lets you install apps through the Homebrew C
 
 **Verification status:** Status compiled from the projects' own pages. Whether the 75QNED916QE firmware is exploitable is not yet checked.
 
+## Reference device
+
+- Model: LG 75QNED916QE
+- Installed software version: 04.60.85 (read from Settings, Software Update)
+- Offered update: 04.60.92, not installed. Automatic update is off.
+- The TV's open source license list names MediaTek and Realtek drivers (for example Bluetooth). This is no sign of an open bootloader.
+
+Do not install the offered update if you want to keep the option of rooting. The projects below state that updates close the exploit, and downgrading is not supported.
+
 ## Status of known tools
 
 | Tool | Notes |

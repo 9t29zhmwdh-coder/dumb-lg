@@ -22,6 +22,10 @@ Some soundbars have only one HDMI output (eARC) and no HDMI input. According to 
 - Optical (TOSLINK) cannot carry Atmos. It is fine as a fallback for stereo or Dolby Digital.
 - The HW-S60D is listed as decoding Dolby Atmos, Dolby Digital Plus and Dolby TrueHD, so the bar itself is not the limit.
 
+## What a working link looks like
+
+On the reference TV the Home screen lists the soundbar as the audio output with the note "HDMI(ARC) device". That means the TV found the bar and uses it, but it negotiated plain ARC. For Atmos from an Apple TV 4K you want eARC. If your TV shows ARC here, check that the cable sits in the port labelled eARC and that SIMPLINK and the bar's CEC option are on.
+
 ## Setup, in this order
 
 1. **Cabling.** Use a cable rated Ultra High Speed (HDMI 2.1) between TV and soundbar. Put nothing between them: no HDMI switch, no hub, no splitter. A device in this path is the most likely reason for "only the TV speakers work".
