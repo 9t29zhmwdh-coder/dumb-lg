@@ -2,7 +2,9 @@
 
 Goal: Dolby Atmos from an Apple TV 4K reaches a soundbar through the TV, instead of the TV speakers playing the sound.
 
-**Verification status:** Built from vendor documentation and community reports (linked at the bottom). Not yet confirmed on the 75QNED916QE. Menu labels differ between firmware versions.
+**Verification status:** Built from vendor documentation and community reports (linked at the bottom). Confirmed on the reference setup (LG 75QNED916QE, firmware 04.60.85, Samsung HW-S60D, Apple TV 4K): the soundbar in HDMI 3 links as eARC, and the sound works after the digital sound output is changed from PCM to Automatic. Menu labels differ between firmware versions.
+
+**Confirmed fix on the reference TV:** the soundbar was found but the sound was weak because the digital sound output was set to PCM. Setting it to Automatic fixed it immediately. Check this first.
 
 ## The signal chain
 
@@ -24,7 +26,7 @@ Some soundbars have only one HDMI output (eARC) and no HDMI input. According to 
 
 ## Which port is eARC on the 75QNED916QE
 
-According to [LG's UK specification page](https://www.lg.com/uk/tvs-soundbars/qned/75qned916qe/), the TV has four HDMI inputs and the eARC port is HDMI 3. This is from the specification of the UK variant and is not yet confirmed on the reference TV. Check the label on the back of the TV. Put the soundbar in this port and the Apple TV in another one.
+According to [LG's UK specification page](https://www.lg.com/uk/tvs-soundbars/qned/75qned916qe/), the TV has four HDMI inputs and the eARC port is HDMI 3. This is from the specification of the UK variant. On the reference TV, a soundbar in HDMI 3 is shown as eARC, which confirms it. Check the label on the back of your TV. Put the soundbar in this port and the Apple TV in another one.
 
 ## What a working link looks like
 
@@ -34,7 +36,7 @@ On the reference TV the Home screen lists the soundbar as the audio output with 
 
 1. **Cabling.** Use a cable rated Ultra High Speed (HDMI 2.1) between TV and soundbar. Put nothing between them: no HDMI switch, no hub, no splitter. A device in this path is the most likely reason for "only the TV speakers work".
 2. **TV sound output.** Settings, Sound, Sound Out: choose the HDMI (eARC/ARC) soundbar entry, not TV Speaker. The TV speaker setting is the default and sends no sound to the bar.
-3. **TV digital output.** In the same menu, set the digital sound output to Pass Through (the label may read Auto or Bitstream on some versions). PCM downmixes and loses Atmos.
+3. **TV digital output.** In the same menu, set the digital sound output to Automatic (other versions label it Pass Through or Bitstream). PCM downmixes and loses Atmos. This was the fix on the reference TV.
 4. **HDMI-CEC.** Enable SIMPLINK (LG's name for CEC) on the TV and the matching CEC option on the soundbar (Samsung calls it Anynet+). eARC negotiation relies on it.
 5. **Apple TV.** Settings, Video and Audio, Audio Format: leave Change Format off or set to Auto, and set Dolby Atmos to Auto or On. Pick the soundbar as audio output if it is listed.
 6. **Power cycle once.** Switch off TV, soundbar and Apple TV, unplug the HDMI cable at the soundbar for ten seconds, plug it back in, then power on in this order: soundbar, TV, Apple TV.
@@ -51,7 +53,7 @@ On the reference TV the Home screen lists the soundbar as the audio output with 
 |---------|--------------|-------------|
 | Sound only with TV speaker selected | Soundbar not selected in Sound Out, or eARC link not up | Step 2, then step 6 |
 | No sound at all after switching to the bar | HDMI hub or switch in the path | Remove it, connect directly |
-| Sound works, but no Atmos | Output set to PCM, or Apple TV set to a fixed format | Steps 3 and 5 |
+| Sound weak or no Atmos | Output set to PCM (confirmed cause on the reference TV), or Apple TV set to a fixed format | Steps 3 and 5 |
 | Link drops after TV standby | CEC disabled or out of sync | Step 4, then step 6 |
 | Crackle or dropouts | Cable not rated for the bandwidth | Swap in an Ultra High Speed cable |
 
