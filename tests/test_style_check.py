@@ -89,9 +89,11 @@ class CheckTreeTest(unittest.TestCase):
             self.assertEqual(style_check.check_tree(Path(tmp)), 0)
 
     def test_missing_root_is_rejected(self):
-        with tempfile.TemporaryDirectory() as tmp:
-            with self.assertRaises(NotADirectoryError):
-                style_check.check_tree(Path(tmp) / "missing")
+        with (
+            tempfile.TemporaryDirectory() as tmp,
+            self.assertRaises(NotADirectoryError),
+        ):
+            style_check.check_tree(Path(tmp) / "missing")
 
     def test_file_root_is_rejected(self):
         with tempfile.TemporaryDirectory() as tmp:
@@ -105,17 +107,21 @@ class CheckTreeTest(unittest.TestCase):
             onerror(PermissionError("Cannot read directory"))
             return iter(())
 
-        with tempfile.TemporaryDirectory() as tmp:
-            with patch.object(style_check.os, "walk", side_effect=unreadable_walk):
-                with self.assertRaises(PermissionError):
-                    style_check.check_tree(Path(tmp))
+        with (
+            tempfile.TemporaryDirectory() as tmp,
+            patch.object(style_check.os, "walk", side_effect=unreadable_walk),
+            self.assertRaises(PermissionError),
+        ):
+            style_check.check_tree(Path(tmp))
 
     def test_file_read_errors_produce_cli_error_status(self):
         with tempfile.TemporaryDirectory() as tmp:
             (Path(tmp) / "guide.md").write_text("clean", encoding="utf-8")
-            with patch.object(Path, "read_text", side_effect=PermissionError("denied")):
-                with patch("sys.stderr", new_callable=io.StringIO) as errors:
-                    self.assertEqual(style_check.main(["style_check.py", tmp]), 2)
+            with (
+                patch.object(Path, "read_text", side_effect=PermissionError("denied")),
+                patch("sys.stderr", new_callable=io.StringIO) as errors,
+            ):
+                self.assertEqual(style_check.main(["style_check.py", tmp]), 2)
             self.assertIn("denied", errors.getvalue())
 
 
